@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha 7a</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item item--1" style=color:#eee;>Header</div>
+        <div class="item item--2" style=color:#eee;>Small box 1</div>
+        <div class="item item--3" style=color:#eee;>Small box 2</div>
+        <div class="item item--4" style=color:#eee;>Small box 3</div>
+        <div class="item item--5" style=color:#eee;>Sidebar</div>
+        <div class="item item--6" style=color:#eee;>Main content</div>
+        <div class="item item--7" style=color:#eee;>Footer</div>
+    </div>
+</body>
+<style>
+    .container{
+        display: grid;
+        /* grid-template-rows: repeat(2, 150px);
+        grid-template-columns: repeat(2, 150px) 200px; */
+        /* grid-template-rows: repeat(2, 150px);
+        grid-template-columns: repeat(2, 150px) 1fr; */
+        /* grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 50% 2fr 1fr; */
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns:repeat(4, 1fr);
+     
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+            
+        width: 1000px;
+        margin: 30px auto;
+        background-color: #eee;
+    }
+
+    .item{
+        padding: 10px;
+        background-color: red;
+        font-family: Calibri;
+        font-size: 2em;
+        font-style: italic;
+        min-height: 90px;
+    }
+    .item--1 {
+        /* Header */
+        grid-row: 1;
+        grid-column: 1 / -1
+    }
+    .item--2 { 
+        /* Small box 1 */
+        grid-row: 2;
+    }
+
+    .item--3{
+        /* Small box 2 */
+        grid-row: 2;
+    }
+
+    .item--4{
+        /* Small box 3 */
+        grid-row: 2;
+    }
+
+    .item--5{
+        /* Sidebar */
+        grid-row: 2 / 6;
+        grid-column: 4 / 5;
+    }
+
+    .item--6 {
+        /* Main content */
+        grid-row: 3 / 6;
+        grid-column: 1 / 4;
+    }
+
+    .item--7{
+        /* Footer */
+        grid-row: 6;
+        grid-column: 1 / -1;
+    }
+</style>
+</html>
